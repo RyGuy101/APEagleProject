@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.4.1">
+<eagle version="8.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -295,6 +295,29 @@ by exp-lbrs.ulp</description>
 <hole x="-5.08" y="0" drill="1.4"/>
 <hole x="5.08" y="0" drill="1.4"/>
 </package>
+<package name="GY-521">
+<wire x1="-11.43" y1="10.795" x2="4.445" y2="10.795" width="0.127" layer="21"/>
+<wire x1="4.445" y1="10.795" x2="4.445" y2="-10.16" width="0.127" layer="21"/>
+<wire x1="4.445" y1="-10.16" x2="-11.43" y2="-10.16" width="0.127" layer="21"/>
+<wire x1="-11.43" y1="-10.16" x2="-11.43" y2="10.795" width="0.127" layer="21"/>
+<wire x1="-2.54" y1="-8.89" x2="1.27" y2="-8.89" width="0.127" layer="21"/>
+<wire x1="1.27" y1="-8.89" x2="0.635" y2="-8.255" width="0.127" layer="21"/>
+<wire x1="1.27" y1="-8.89" x2="0.635" y2="-9.525" width="0.127" layer="21"/>
+<wire x1="-2.54" y1="-8.89" x2="-2.54" y2="-5.08" width="0.127" layer="21"/>
+<wire x1="-2.54" y1="-5.08" x2="-1.905" y2="-5.715" width="0.127" layer="21"/>
+<wire x1="-2.54" y1="-5.08" x2="-3.175" y2="-5.715" width="0.127" layer="21"/>
+<pad name="ADO" x="-8.89" y="-6.35" drill="0.8" diameter="1.778" shape="long"/>
+<pad name="GND" x="-8.89" y="6.35" drill="0.8" diameter="1.778" shape="long"/>
+<pad name="INT" x="-8.89" y="-8.89" drill="0.8" diameter="1.778" shape="long"/>
+<pad name="SCL" x="-8.89" y="3.81" drill="0.8" diameter="1.778" shape="long"/>
+<pad name="SDA" x="-8.89" y="1.27" drill="0.8" diameter="1.778" shape="long"/>
+<pad name="VCC" x="-8.89" y="8.89" drill="0.8" diameter="1.778" shape="long"/>
+<pad name="XCL" x="-8.89" y="-3.81" drill="0.8" diameter="1.778" shape="long"/>
+<pad name="XDA" x="-8.89" y="-1.27" drill="0.8" diameter="1.778" shape="long"/>
+<text x="1.905" y="-8.89" size="1.27" layer="21">x</text>
+<text x="-1.27" y="-5.08" size="1.27" layer="21">y</text>
+<text x="3.81" y="-1.27" size="1.27" layer="21" rot="R90">ITG/MPU</text>
+</package>
 </packages>
 <symbols>
 <symbol name="ATMEGAXX8-32PIN_NOPAD">
@@ -350,6 +373,31 @@ by exp-lbrs.ulp</description>
 <pin name="VCC" x="-5.08" y="-2.54" visible="pin" length="middle"/>
 <text x="0" y="10.16" size="1.778" layer="95">&gt;NAME</text>
 <text x="0" y="7.62" size="1.778" layer="96">&gt;VALUE</text>
+</symbol>
+<symbol name="MPU6050">
+<wire x1="-10.16" y1="17.78" x2="-10.16" y2="-22.86" width="0.6096" layer="94"/>
+<wire x1="-10.16" y1="-22.86" x2="17.78" y2="-22.86" width="0.6096" layer="94"/>
+<wire x1="17.78" y1="-22.86" x2="17.78" y2="17.78" width="0.6096" layer="94"/>
+<wire x1="17.78" y1="17.78" x2="-10.16" y2="17.78" width="0.6096" layer="94"/>
+<wire x1="2.54" y1="-20.32" x2="7.62" y2="-20.32" width="0.3048" layer="94"/>
+<wire x1="7.62" y1="-20.32" x2="6.35" y2="-19.05" width="0.3048" layer="94"/>
+<wire x1="7.62" y1="-20.32" x2="6.35" y2="-21.59" width="0.3048" layer="94"/>
+<wire x1="2.54" y1="-20.32" x2="2.54" y2="-15.24" width="0.3048" layer="94"/>
+<wire x1="2.54" y1="-15.24" x2="1.27" y2="-16.51" width="0.3048" layer="94"/>
+<wire x1="2.54" y1="-15.24" x2="3.81" y2="-16.51" width="0.3048" layer="94"/>
+<pin name="ADO" x="-15.24" y="-15.24" length="middle"/>
+<pin name="GND" x="-15.24" y="10.16" length="middle"/>
+<pin name="INT" x="-15.24" y="-20.32" length="middle"/>
+<pin name="SCL" x="-15.24" y="5.08" length="middle"/>
+<pin name="SDA" x="-15.24" y="0" length="middle"/>
+<pin name="VCC" x="-15.24" y="15.24" length="middle"/>
+<pin name="XCL" x="-15.24" y="-10.16" length="middle"/>
+<pin name="XDA" x="-15.24" y="-5.08" length="middle"/>
+<text x="13.716" y="-9.398" size="1.778" layer="94" rot="R270">GY-521</text>
+<text x="15.24" y="-7.62" size="1.778" layer="94" rot="R90">ITG/MPU</text>
+<text x="8.89" y="-21.082" size="1.778" layer="94">x</text>
+<text x="5.08" y="-15.24" size="1.778" layer="94">y</text>
+<text x="-1.524" y="14.732" size="1.778" layer="94">3.3V (or 5v)</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -434,6 +482,28 @@ by exp-lbrs.ulp</description>
 <technology name="">
 <attribute name="PROD_ID" value="CONN-08971" constant="no"/>
 </technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="GY-521" prefix="U">
+<gates>
+<gate name="G$1" symbol="MPU6050" x="-2.54" y="5.08"/>
+</gates>
+<devices>
+<device name="MPU6050" package="GY-521">
+<connects>
+<connect gate="G$1" pin="ADO" pad="ADO"/>
+<connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="INT" pad="INT"/>
+<connect gate="G$1" pin="SCL" pad="SCL"/>
+<connect gate="G$1" pin="SDA" pad="SDA"/>
+<connect gate="G$1" pin="VCC" pad="VCC"/>
+<connect gate="G$1" pin="XCL" pad="XCL"/>
+<connect gate="G$1" pin="XDA" pad="XDA"/>
+</connects>
+<technologies>
+<technology name=""/>
 </technologies>
 </device>
 </devices>
@@ -10525,6 +10595,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="U$2" library="SparkFun-RF" deviceset="NRF24L01" device="SMD"/>
 <part name="SUPPLY2" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="D1" library="SparkFun-LED" deviceset="LED" device="0603"/>
+<part name="U2" library="quad" deviceset="GY-521" device="MPU6050"/>
 </parts>
 <sheets>
 <sheet>
@@ -10546,6 +10617,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="U$2" gate="G$1" x="20.32" y="-33.02"/>
 <instance part="SUPPLY2" gate="GND" x="10.16" y="-55.88"/>
 <instance part="D1" gate="G$1" x="22.86" y="68.58" rot="R270"/>
+<instance part="U2" gate="G$1" x="-33.02" y="22.86" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -10637,6 +10709,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="91.44" y1="2.54" x2="38.1" y2="2.54" width="0.1524" layer="91"/>
 <pinref part="U1" gate="U$1" pin="GND@5"/>
 <wire x1="38.1" y1="2.54" x2="38.1" y2="12.7" width="0.1524" layer="91"/>
+<pinref part="U2" gate="G$1" pin="GND"/>
+<wire x1="-17.78" y1="12.7" x2="38.1" y2="12.7" width="0.1524" layer="91"/>
+<junction x="38.1" y="12.7"/>
 </segment>
 </net>
 <net name="N$10" class="0">
@@ -10707,6 +10782,51 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="-7.62" y1="68.58" x2="-20.32" y2="68.58" width="0.1524" layer="91"/>
 <wire x1="-7.62" y1="68.58" x2="-7.62" y2="76.2" width="0.1524" layer="91"/>
 <junction x="-7.62" y="68.58"/>
+</segment>
+</net>
+<net name="N$16" class="0">
+<segment>
+<pinref part="U2" gate="G$1" pin="VCC"/>
+<wire x1="-17.78" y1="7.62" x2="10.16" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="10.16" y1="7.62" x2="10.16" y2="60.96" width="0.1524" layer="91"/>
+<pinref part="U1" gate="U$1" pin="VCC@4"/>
+<wire x1="10.16" y1="60.96" x2="38.1" y2="60.96" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$17" class="0">
+<segment>
+<pinref part="U2" gate="G$1" pin="SCL"/>
+<wire x1="-17.78" y1="17.78" x2="-17.78" y2="-63.5" width="0.1524" layer="91"/>
+<wire x1="-17.78" y1="-63.5" x2="132.08" y2="-63.5" width="0.1524" layer="91"/>
+<pinref part="U1" gate="U$1" pin="PC5(ADC5/SCL)"/>
+<wire x1="132.08" y1="-63.5" x2="132.08" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="55.88" x2="86.36" y2="55.88" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$18" class="0">
+<segment>
+<pinref part="U2" gate="G$1" pin="SDA"/>
+<wire x1="-17.78" y1="22.86" x2="-10.16" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="-10.16" y1="22.86" x2="-10.16" y2="-60.96" width="0.1524" layer="91"/>
+<wire x1="-10.16" y1="-60.96" x2="134.62" y2="-60.96" width="0.1524" layer="91"/>
+<wire x1="134.62" y1="-60.96" x2="134.62" y2="58.42" width="0.1524" layer="91"/>
+<pinref part="U1" gate="U$1" pin="PC4(ADC4/SDA)"/>
+<wire x1="134.62" y1="58.42" x2="86.36" y2="58.42" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$19" class="0">
+<segment>
+<pinref part="U2" gate="G$1" pin="INT"/>
+<wire x1="-17.78" y1="43.18" x2="-17.78" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="-17.78" y1="53.34" x2="-58.42" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="-58.42" y1="53.34" x2="-58.42" y2="-71.12" width="0.1524" layer="91"/>
+<wire x1="-58.42" y1="-71.12" x2="139.7" y2="-71.12" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="-71.12" x2="139.7" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="27.94" x2="93.98" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="27.94" x2="93.98" y2="33.02" width="0.1524" layer="91"/>
+<pinref part="U1" gate="U$1" pin="PD2(INT0)"/>
+<wire x1="93.98" y1="33.02" x2="86.36" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="33.02" x2="86.36" y2="40.64" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
