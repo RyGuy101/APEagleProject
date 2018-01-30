@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.4.3">
+<eagle version="8.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -524,10 +524,10 @@ by exp-lbrs.ulp</description>
 </classes>
 <parts>
 <part name="U$1" library="quad" deviceset="JST_CONNECTOR_FEMALE" device=""/>
-<part name="U$2" library="quad" deviceset="N-CHANNEL-MOSFET" device="-BSS138"/>
 <part name="U1" library="quad" deviceset="ATMEGA328P_TQFP" device="" value="ATMEGA328P_TQFP"/>
 <part name="U$4" library="quad" deviceset="DB2W40300L" device=""/>
 <part name="U$3" library="quad" deviceset="JST_CONNECTOR_FEMALE" device=""/>
+<part name="U$5" library="quad" deviceset="N-CHANNEL-MOSFET" device="-BSS138"/>
 </parts>
 <sheets>
 <sheet>
@@ -535,10 +535,10 @@ by exp-lbrs.ulp</description>
 </plain>
 <instances>
 <instance part="U$1" gate="G$1" x="25.4" y="104.14" rot="R90"/>
-<instance part="U$2" gate="G$1" x="33.02" y="30.48"/>
 <instance part="U1" gate="U$1" x="-20.32" y="53.34"/>
 <instance part="U$4" gate="G$1" x="35.56" y="60.96" rot="R90"/>
 <instance part="U$3" gate="G$1" x="55.88" y="60.96" rot="R270"/>
+<instance part="U$5" gate="G$1" x="33.02" y="30.48"/>
 </instances>
 <busses>
 </busses>
@@ -546,14 +546,13 @@ by exp-lbrs.ulp</description>
 <net name="N$1" class="0">
 <segment>
 <pinref part="U1" gate="U$1" pin="ADC7"/>
-<pinref part="U$2" gate="G$1" pin="G"/>
 <wire x1="2.54" y1="66.04" x2="27.94" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="27.94" y1="66.04" x2="27.94" y2="27.94" width="0.1524" layer="91"/>
+<pinref part="U$5" gate="G$1" pin="G"/>
 </segment>
 </net>
 <net name="N$2" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="D"/>
 <pinref part="U$4" gate="G$1" pin="PPIN"/>
 <wire x1="35.56" y1="38.1" x2="35.56" y2="48.26" width="0.1524" layer="91"/>
 <pinref part="U$3" gate="G$1" pin="-"/>
@@ -561,6 +560,7 @@ by exp-lbrs.ulp</description>
 <wire x1="45.72" y1="58.42" x2="45.72" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="45.72" y1="48.26" x2="35.56" y2="48.26" width="0.1524" layer="91"/>
 <junction x="35.56" y="48.26"/>
+<pinref part="U$5" gate="G$1" pin="D"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -575,7 +575,6 @@ by exp-lbrs.ulp</description>
 </net>
 <net name="N$4" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="S"/>
 <wire x1="35.56" y1="22.86" x2="35.56" y2="7.62" width="0.1524" layer="91"/>
 <wire x1="35.56" y1="7.62" x2="78.74" y2="7.62" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="G$1" pin="-"/>
@@ -585,6 +584,7 @@ by exp-lbrs.ulp</description>
 <wire x1="-45.72" y1="27.94" x2="-45.72" y2="7.62" width="0.1524" layer="91"/>
 <wire x1="-45.72" y1="7.62" x2="35.56" y2="7.62" width="0.1524" layer="91"/>
 <junction x="35.56" y="7.62"/>
+<pinref part="U$5" gate="G$1" pin="S"/>
 </segment>
 </net>
 </nets>
