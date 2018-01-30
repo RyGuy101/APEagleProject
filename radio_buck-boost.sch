@@ -9975,6 +9975,8 @@ Source: http://focus.ti.com/lit/ds/symlink/tps63001.pdf</description>
 <part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="100"/>
 <part name="C9" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1uF"/>
 <part name="U$1" library="quad" deviceset="JST_CONNECTOR_FEMALE" device=""/>
+<part name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="10uF"/>
+<part name="C2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="100nF"/>
 </parts>
 <sheets>
 <sheet>
@@ -9992,6 +9994,8 @@ Source: http://focus.ti.com/lit/ds/symlink/tps63001.pdf</description>
 <instance part="R2" gate="G$1" x="-7.62" y="93.98" rot="R90"/>
 <instance part="C9" gate="G$1" x="-15.24" y="83.82"/>
 <instance part="U$1" gate="G$1" x="68.58" y="99.06"/>
+<instance part="C1" gate="G$1" x="129.54" y="-10.16"/>
+<instance part="C2" gate="G$1" x="116.84" y="-10.16"/>
 </instances>
 <busses>
 </busses>
@@ -10085,20 +10089,20 @@ Source: http://focus.ti.com/lit/ds/symlink/tps63001.pdf</description>
 <pinref part="U$2" gate="G$1" pin="VDD@18"/>
 <wire x1="114.3" y1="30.48" x2="114.3" y2="33.02" width="0.1524" layer="91"/>
 <wire x1="114.3" y1="33.02" x2="142.24" y2="33.02" width="0.1524" layer="91"/>
-<wire x1="142.24" y1="33.02" x2="142.24" y2="-22.86" width="0.1524" layer="91"/>
+<wire x1="142.24" y1="33.02" x2="142.24" y2="-2.54" width="0.1524" layer="91"/>
 <pinref part="U1" gate="U$1" pin="VCC@6"/>
+<wire x1="142.24" y1="-2.54" x2="142.24" y2="-22.86" width="0.1524" layer="91"/>
 <wire x1="22.86" y1="58.42" x2="38.1" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="22.86" y1="-22.86" x2="22.86" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="142.24" y1="-22.86" x2="22.86" y2="-22.86" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$2" class="0">
-<segment>
-<pinref part="U$2" gate="G$1" pin="VSS@0"/>
-<wire x1="106.68" y1="0" x2="106.68" y2="-7.62" width="0.1524" layer="91"/>
-<pinref part="U1" gate="U$1" pin="GND@5"/>
-<wire x1="106.68" y1="-7.62" x2="38.1" y2="-7.62" width="0.1524" layer="91"/>
-<wire x1="38.1" y1="-7.62" x2="38.1" y2="12.7" width="0.1524" layer="91"/>
+<pinref part="C1" gate="G$1" pin="1"/>
+<wire x1="142.24" y1="-2.54" x2="129.54" y2="-2.54" width="0.1524" layer="91"/>
+<wire x1="129.54" y1="-2.54" x2="129.54" y2="-7.62" width="0.1524" layer="91"/>
+<junction x="142.24" y="-2.54"/>
+<pinref part="C2" gate="G$1" pin="1"/>
+<wire x1="129.54" y1="-2.54" x2="116.84" y2="-2.54" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="-2.54" x2="116.84" y2="-7.62" width="0.1524" layer="91"/>
+<junction x="129.54" y="-2.54"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -10191,6 +10195,24 @@ Source: http://focus.ti.com/lit/ds/symlink/tps63001.pdf</description>
 <wire x1="48.26" y1="96.52" x2="58.42" y2="96.52" width="0.1524" layer="91"/>
 <wire x1="12.7" y1="76.2" x2="12.7" y2="15.24" width="0.1524" layer="91"/>
 <junction x="12.7" y="15.24"/>
+</segment>
+</net>
+<net name="N$11" class="0">
+<segment>
+<pinref part="C1" gate="G$1" pin="2"/>
+<wire x1="129.54" y1="-15.24" x2="129.54" y2="-17.78" width="0.1524" layer="91"/>
+<pinref part="U$2" gate="G$1" pin="VSS@0"/>
+<wire x1="106.68" y1="0" x2="106.68" y2="-7.62" width="0.1524" layer="91"/>
+<pinref part="U1" gate="U$1" pin="GND@5"/>
+<wire x1="106.68" y1="-7.62" x2="38.1" y2="-7.62" width="0.1524" layer="91"/>
+<wire x1="38.1" y1="-7.62" x2="38.1" y2="12.7" width="0.1524" layer="91"/>
+<pinref part="C2" gate="G$1" pin="2"/>
+<wire x1="116.84" y1="-15.24" x2="116.84" y2="-17.78" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="-17.78" x2="106.68" y2="-17.78" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="-17.78" x2="106.68" y2="-7.62" width="0.1524" layer="91"/>
+<junction x="106.68" y="-7.62"/>
+<wire x1="129.54" y1="-17.78" x2="116.84" y2="-17.78" width="0.1524" layer="91"/>
+<junction x="116.84" y="-17.78"/>
 </segment>
 </net>
 </nets>
