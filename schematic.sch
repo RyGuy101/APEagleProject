@@ -318,6 +318,27 @@ by exp-lbrs.ulp</description>
 <text x="-1.27" y="-5.08" size="1.27" layer="21">y</text>
 <text x="3.81" y="-1.27" size="1.27" layer="21" rot="R90">ITG/MPU</text>
 </package>
+<package name="JST_CONNECTOR_FEMALE">
+<wire x1="-2.8" y1="-2.95" x2="1.7" y2="-2.95" width="0.127" layer="21"/>
+<wire x1="1.7" y1="2.95" x2="-2.8" y2="2.95" width="0.127" layer="21"/>
+<wire x1="-2.8" y1="2.95" x2="-2.8" y2="-2.95" width="0.127" layer="21"/>
+<wire x1="1.7" y1="2.95" x2="1.7" y2="0.3" width="0.127" layer="21"/>
+<wire x1="1.7" y1="0.3" x2="1.7" y2="-0.3" width="0.127" layer="21"/>
+<wire x1="1.7" y1="-0.3" x2="1.7" y2="-2.95" width="0.127" layer="21"/>
+<wire x1="-0.3" y1="2.9" x2="-0.3" y2="2.5" width="0.127" layer="21"/>
+<wire x1="0.3" y1="2.9" x2="0.3" y2="2.5" width="0.127" layer="21"/>
+<wire x1="-0.3" y1="2.5" x2="0.3" y2="2.5" width="0.127" layer="21"/>
+<wire x1="1.7" y1="0.3" x2="1.25" y2="0.3" width="0.127" layer="21"/>
+<wire x1="1.7" y1="-0.3" x2="1.25" y2="-0.3" width="0.127" layer="21"/>
+<wire x1="1.25" y1="0.3" x2="1.25" y2="-0.3" width="0.127" layer="21"/>
+<wire x1="-0.3" y1="-2.9" x2="-0.3" y2="-2.5" width="0.127" layer="21"/>
+<wire x1="0.3" y1="-2.9" x2="0.3" y2="-2.5" width="0.127" layer="21"/>
+<wire x1="-0.3" y1="-2.5" x2="0.3" y2="-2.5" width="0.127" layer="21"/>
+<pad name="+" x="0" y="1" drill="0.889"/>
+<pad name="-" x="0" y="-1" drill="0.889"/>
+<text x="-2" y="1" size="1.27" layer="21">+</text>
+<text x="-2" y="-2" size="1.27" layer="21">-</text>
+</package>
 </packages>
 <symbols>
 <symbol name="ATMEGAXX8-32PIN_NOPAD">
@@ -398,6 +419,15 @@ by exp-lbrs.ulp</description>
 <text x="8.89" y="-21.082" size="1.778" layer="94">x</text>
 <text x="5.08" y="-15.24" size="1.778" layer="94">y</text>
 <text x="-1.524" y="14.732" size="1.778" layer="94">3.3V (or 5v)</text>
+</symbol>
+<symbol name="JST_CONNECTOR_FEMALE">
+<wire x1="-7.62" y1="-5.08" x2="7.62" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-5.08" x2="7.62" y2="5.08" width="0.254" layer="94"/>
+<wire x1="7.62" y1="5.08" x2="-7.62" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="5.08" x2="-7.62" y2="-5.08" width="0.254" layer="94"/>
+<pin name="+" x="-2.54" y="-10.16" length="middle" rot="R90"/>
+<pin name="-" x="2.54" y="-10.16" length="middle" rot="R90"/>
+<text x="-7.62" y="7.62" size="1.27" layer="95">JST_CONNECTOR</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -501,6 +531,22 @@ by exp-lbrs.ulp</description>
 <connect gate="G$1" pin="VCC" pad="VCC"/>
 <connect gate="G$1" pin="XCL" pad="XCL"/>
 <connect gate="G$1" pin="XDA" pad="XDA"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="JST_CONNECTOR_FEMALE">
+<gates>
+<gate name="G$1" symbol="JST_CONNECTOR_FEMALE" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="JST_CONNECTOR_FEMALE">
+<connects>
+<connect gate="G$1" pin="+" pad="+"/>
+<connect gate="G$1" pin="-" pad="-"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -9758,74 +9804,6 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="special" urn="urn:adsk.eagle:library:367">
-<description>&lt;b&gt;Special Devices&lt;/b&gt;&lt;p&gt;
-7-segment displays, switches, heatsinks, crystals, transformers, etc.&lt;p&gt;
-&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
-<packages>
-<package name="BATTERY" urn="urn:adsk.eagle:footprint:26592/1" library_version="2">
-<description>&lt;B&gt;BATTERY&lt;/B&gt;&lt;p&gt;
-22 mm</description>
-<wire x1="0.635" y1="2.54" x2="0.635" y2="0" width="0.1524" layer="21"/>
-<wire x1="-2.54" y1="0" x2="-0.635" y2="0" width="0.1524" layer="21"/>
-<wire x1="0.635" y1="0" x2="2.54" y2="0" width="0.1524" layer="21"/>
-<wire x1="0.635" y1="0" x2="0.635" y2="-2.54" width="0.1524" layer="21"/>
-<wire x1="1.27" y1="-3.175" x2="2.54" y2="-3.175" width="0.1524" layer="21"/>
-<wire x1="1.905" y1="-2.54" x2="1.905" y2="-3.81" width="0.1524" layer="21"/>
-<circle x="0" y="0" radius="11.43" width="0.1524" layer="21"/>
-<circle x="0" y="0" radius="10.2362" width="0.1524" layer="21"/>
-<pad name="-" x="-5.715" y="0" drill="1.016" shape="long"/>
-<pad name="+" x="9.525" y="-5.08" drill="1.016" shape="long"/>
-<pad name="+@1" x="9.525" y="5.08" drill="1.016" shape="long"/>
-<text x="-4.1656" y="6.35" size="1.778" layer="25" ratio="10">&gt;NAME</text>
-<text x="-4.445" y="3.81" size="1.778" layer="27" ratio="10">&gt;VALUE</text>
-<rectangle x1="-0.635" y1="-1.27" x2="0" y2="1.27" layer="21"/>
-</package>
-</packages>
-<packages3d>
-<package3d name="BATTERY" urn="urn:adsk.eagle:package:26670/1" type="box" library_version="2">
-<description>BATTERY
-22 mm</description>
-</package3d>
-</packages3d>
-<symbols>
-<symbol name="BATTERY" urn="urn:adsk.eagle:symbol:26591/1" library_version="2">
-<wire x1="-1.27" y1="3.81" x2="-1.27" y2="-3.81" width="0.4064" layer="94"/>
-<wire x1="0" y1="1.27" x2="0" y2="-1.27" width="0.4064" layer="94"/>
-<wire x1="1.27" y1="3.81" x2="1.27" y2="-3.81" width="0.4064" layer="94"/>
-<wire x1="2.54" y1="1.27" x2="2.54" y2="-1.27" width="0.4064" layer="94"/>
-<wire x1="-2.54" y1="0" x2="-1.524" y2="0" width="0.1524" layer="94"/>
-<text x="-3.81" y="5.08" size="1.778" layer="95">&gt;NAME</text>
-<text x="-3.81" y="-6.35" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="-" x="5.08" y="0" visible="off" length="short" direction="pwr" rot="R180"/>
-<pin name="+" x="-5.08" y="0" visible="off" length="short" direction="pwr"/>
-<pin name="+@1" x="-2.54" y="0" visible="off" length="short" direction="pwr" rot="R180"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="BATTERY" urn="urn:adsk.eagle:component:26693/1" prefix="BAT" uservalue="yes" library_version="2">
-<description>&lt;B&gt;BATTERY&lt;/B&gt;</description>
-<gates>
-<gate name="G$1" symbol="BATTERY" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="BATTERY">
-<connects>
-<connect gate="G$1" pin="+" pad="+"/>
-<connect gate="G$1" pin="+@1" pad="+@1"/>
-<connect gate="G$1" pin="-" pad="-"/>
-</connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:26670/1"/>
-</package3dinstances>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="SparkFun">
 <description>&lt;h3&gt;SparkFun Electronics' preferred foot prints&lt;/h3&gt;
 We've spent an enormous amount of time creating and checking these footprints and parts. If you enjoy using this library, please buy one of our products at www.sparkfun.com.
@@ -16113,13 +16091,12 @@ Source: http://focus.ti.com/lit/ds/symlink/tps63001.pdf</description>
 <part name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="100nF"/>
 <part name="C2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="100nF"/>
 <part name="C3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="100nF"/>
-<part name="BAT1" library="special" library_urn="urn:adsk.eagle:library:367" deviceset="BATTERY" device="" package3d_urn="urn:adsk.eagle:package:26670/1" value="3.7 V"/>
 <part name="C4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C2220K" package3d_urn="urn:adsk.eagle:package:23687/2" value="100uF"/>
 <part name="J1" library="quad" deviceset="FTDI_DEVICE" device=""/>
 <part name="JP2" library="SparkFun" deviceset="M06" device="SMD-FEMALE-V2"/>
 <part name="S1" library="SparkFun-Switches" deviceset="MOMENTARY-SWITCH-SPST" device="-SMD-5.2MM"/>
 <part name="SUPPLY1" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
-<part name="R1" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:26057/1"/>
+<part name="R1" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:26057/1" value="10k"/>
 <part name="C5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="100nF"/>
 <part name="U$2" library="SparkFun-RF" deviceset="NRF24L01" device="SMD"/>
 <part name="SUPPLY2" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
@@ -16130,8 +16107,9 @@ Source: http://focus.ti.com/lit/ds/symlink/tps63001.pdf</description>
 <part name="C6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="10uF"/>
 <part name="C7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="10uF"/>
 <part name="C8" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="10uF"/>
-<part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2"/>
+<part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="100"/>
 <part name="C9" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1uF"/>
+<part name="U$1" library="quad" deviceset="JST_CONNECTOR_FEMALE" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -16142,8 +16120,7 @@ Source: http://focus.ti.com/lit/ds/symlink/tps63001.pdf</description>
 <instance part="C1" gate="G$1" x="27.94" y="60.96"/>
 <instance part="C2" gate="G$1" x="27.94" y="50.8"/>
 <instance part="C3" gate="G$1" x="17.78" y="55.88"/>
-<instance part="BAT1" gate="G$1" x="60.96" y="83.82"/>
-<instance part="C4" gate="G$1" x="58.42" y="93.98" rot="R90"/>
+<instance part="C4" gate="G$1" x="68.58" y="81.28" rot="R90"/>
 <instance part="J1" gate="G$1" x="114.3" y="43.18"/>
 <instance part="JP2" gate="G$1" x="99.06" y="43.18" rot="R180"/>
 <instance part="S1" gate="G$1" x="-25.4" y="68.58"/>
@@ -16161,6 +16138,7 @@ Source: http://focus.ti.com/lit/ds/symlink/tps63001.pdf</description>
 <instance part="C8" gate="G$1" x="71.12" y="114.3"/>
 <instance part="R2" gate="G$1" x="-7.62" y="93.98" rot="R90"/>
 <instance part="C9" gate="G$1" x="-15.24" y="83.82"/>
+<instance part="U$1" gate="G$1" x="68.58" y="99.06"/>
 </instances>
 <busses>
 </busses>
@@ -16177,40 +16155,6 @@ Source: http://focus.ti.com/lit/ds/symlink/tps63001.pdf</description>
 <pinref part="C2" gate="G$1" pin="1"/>
 <pinref part="U1" gate="U$1" pin="AREF"/>
 <wire x1="27.94" y1="53.34" x2="38.1" y2="53.34" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$5" class="0">
-<segment>
-<pinref part="C3" gate="G$1" pin="1"/>
-<pinref part="U1" gate="U$1" pin="VCC@6"/>
-<wire x1="17.78" y1="58.42" x2="35.56" y2="58.42" width="0.1524" layer="91"/>
-<pinref part="JP2" gate="G$1" pin="4"/>
-<wire x1="35.56" y1="58.42" x2="38.1" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="93.98" y1="40.64" x2="88.9" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="88.9" y1="40.64" x2="88.9" y2="0" width="0.1524" layer="91"/>
-<wire x1="88.9" y1="0" x2="35.56" y2="0" width="0.1524" layer="91"/>
-<wire x1="35.56" y1="0" x2="35.56" y2="58.42" width="0.1524" layer="91"/>
-<junction x="35.56" y="58.42"/>
-</segment>
-</net>
-<net name="N$7" class="0">
-<segment>
-<pinref part="BAT1" gate="G$1" pin="-"/>
-<wire x1="66.04" y1="83.82" x2="68.58" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="68.58" y1="83.82" x2="68.58" y2="93.98" width="0.1524" layer="91"/>
-<pinref part="C4" gate="G$1" pin="2"/>
-<wire x1="68.58" y1="93.98" x2="63.5" y2="93.98" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$8" class="0">
-<segment>
-<pinref part="C4" gate="G$1" pin="1"/>
-<wire x1="55.88" y1="93.98" x2="53.34" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="53.34" y1="93.98" x2="53.34" y2="83.82" width="0.1524" layer="91"/>
-<pinref part="BAT1" gate="G$1" pin="+"/>
-<wire x1="53.34" y1="83.82" x2="55.88" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="53.34" y1="83.82" x2="53.34" y2="76.2" width="0.1524" layer="91"/>
-<junction x="53.34" y="83.82"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -16313,10 +16257,19 @@ Source: http://focus.ti.com/lit/ds/symlink/tps63001.pdf</description>
 <net name="N$16" class="0">
 <segment>
 <pinref part="U2" gate="G$1" pin="VCC"/>
-<wire x1="-17.78" y1="7.62" x2="10.16" y2="7.62" width="0.1524" layer="91"/>
-<wire x1="10.16" y1="7.62" x2="10.16" y2="60.96" width="0.1524" layer="91"/>
-<pinref part="U1" gate="U$1" pin="VCC@4"/>
-<wire x1="10.16" y1="60.96" x2="38.1" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="-17.78" y1="7.62" x2="12.7" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="12.7" y1="7.62" x2="12.7" y2="58.42" width="0.1524" layer="91"/>
+<pinref part="C3" gate="G$1" pin="1"/>
+<pinref part="U1" gate="U$1" pin="VCC@6"/>
+<wire x1="17.78" y1="58.42" x2="35.56" y2="58.42" width="0.1524" layer="91"/>
+<pinref part="JP2" gate="G$1" pin="4"/>
+<wire x1="35.56" y1="58.42" x2="38.1" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="40.64" x2="88.9" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="88.9" y1="40.64" x2="88.9" y2="0" width="0.1524" layer="91"/>
+<wire x1="88.9" y1="0" x2="35.56" y2="0" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="0" x2="35.56" y2="58.42" width="0.1524" layer="91"/>
+<junction x="35.56" y="58.42"/>
+<wire x1="12.7" y1="58.42" x2="35.56" y2="58.42" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$17" class="0">
@@ -16419,16 +16372,13 @@ Source: http://focus.ti.com/lit/ds/symlink/tps63001.pdf</description>
 <wire x1="38.1" y1="91.44" x2="40.64" y2="91.44" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="91.44" x2="40.64" y2="99.06" width="0.1524" layer="91"/>
 <junction x="40.64" y="99.06"/>
-</segment>
-</net>
-<net name="N$27" class="0">
-<segment>
-<pinref part="R2" gate="G$1" pin="2"/>
-<pinref part="IC1" gate="G$1" pin="VIN"/>
-<wire x1="-7.62" y1="99.06" x2="12.7" y2="99.06" width="0.1524" layer="91"/>
-<pinref part="C6" gate="G$1" pin="1"/>
-<wire x1="-7.62" y1="99.06" x2="-22.86" y2="99.06" width="0.1524" layer="91"/>
-<junction x="-7.62" y="99.06"/>
+<wire x1="71.12" y1="116.84" x2="81.28" y2="116.84" width="0.1524" layer="91"/>
+<junction x="71.12" y="116.84"/>
+<wire x1="81.28" y1="116.84" x2="81.28" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="73.66" x2="35.56" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="73.66" x2="35.56" y2="60.96" width="0.1524" layer="91"/>
+<pinref part="U1" gate="U$1" pin="VCC@4"/>
+<wire x1="35.56" y1="60.96" x2="38.1" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$28" class="0">
@@ -16453,8 +16403,36 @@ Source: http://focus.ti.com/lit/ds/symlink/tps63001.pdf</description>
 <junction x="-7.62" y="88.9"/>
 </segment>
 </net>
-<net name="N$29" class="0">
+<net name="N$6" class="0">
 <segment>
+<pinref part="U$1" gate="G$1" pin="+"/>
+<pinref part="C4" gate="G$1" pin="1"/>
+<wire x1="66.04" y1="88.9" x2="66.04" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="88.9" x2="45.72" y2="88.9" width="0.1524" layer="91"/>
+<junction x="66.04" y="88.9"/>
+<wire x1="45.72" y1="88.9" x2="45.72" y2="119.38" width="0.1524" layer="91"/>
+<pinref part="R2" gate="G$1" pin="2"/>
+<pinref part="IC1" gate="G$1" pin="VIN"/>
+<wire x1="-7.62" y1="99.06" x2="12.7" y2="99.06" width="0.1524" layer="91"/>
+<pinref part="C6" gate="G$1" pin="1"/>
+<wire x1="-7.62" y1="99.06" x2="-22.86" y2="99.06" width="0.1524" layer="91"/>
+<junction x="-7.62" y="99.06"/>
+<wire x1="-22.86" y1="99.06" x2="-30.48" y2="99.06" width="0.1524" layer="91"/>
+<junction x="-22.86" y="99.06"/>
+<wire x1="45.72" y1="119.38" x2="-30.48" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="-30.48" y1="119.38" x2="-30.48" y2="99.06" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$7" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="-"/>
+<wire x1="71.12" y1="88.9" x2="73.66" y2="88.9" width="0.1524" layer="91"/>
+<pinref part="C4" gate="G$1" pin="2"/>
+<wire x1="73.66" y1="88.9" x2="73.66" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="88.9" x2="71.12" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="86.36" x2="53.34" y2="86.36" width="0.1524" layer="91"/>
+<junction x="71.12" y="88.9"/>
+<wire x1="53.34" y1="86.36" x2="53.34" y2="78.74" width="0.1524" layer="91"/>
 <pinref part="C8" gate="G$1" pin="2"/>
 <pinref part="C7" gate="G$1" pin="2"/>
 <wire x1="71.12" y1="109.22" x2="58.42" y2="109.22" width="0.1524" layer="91"/>
@@ -16501,7 +16479,9 @@ Source: http://focus.ti.com/lit/ds/symlink/tps63001.pdf</description>
 <pinref part="U$2" gate="G$1" pin="VDD@18"/>
 <wire x1="17.78" y1="15.24" x2="17.78" y2="-17.78" width="0.1524" layer="91"/>
 <junction x="17.78" y="15.24"/>
-<wire x1="5.08" y1="15.24" x2="38.1" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="5.08" y1="15.24" x2="17.78" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="78.74" x2="40.64" y2="78.74" width="0.1524" layer="91"/>
+<junction x="40.64" y="78.74"/>
 </segment>
 </net>
 </nets>
