@@ -295,6 +295,27 @@ by exp-lbrs.ulp</description>
 <hole x="-5.08" y="0" drill="1.4"/>
 <hole x="5.08" y="0" drill="1.4"/>
 </package>
+<package name="JST_CONNECTOR_FEMALE">
+<wire x1="-2.8" y1="-2.95" x2="1.7" y2="-2.95" width="0.127" layer="21"/>
+<wire x1="1.7" y1="2.95" x2="-2.8" y2="2.95" width="0.127" layer="21"/>
+<wire x1="-2.8" y1="2.95" x2="-2.8" y2="-2.95" width="0.127" layer="21"/>
+<wire x1="1.7" y1="2.95" x2="1.7" y2="0.3" width="0.127" layer="21"/>
+<wire x1="1.7" y1="0.3" x2="1.7" y2="-0.3" width="0.127" layer="21"/>
+<wire x1="1.7" y1="-0.3" x2="1.7" y2="-2.95" width="0.127" layer="21"/>
+<wire x1="-0.3" y1="2.9" x2="-0.3" y2="2.5" width="0.127" layer="21"/>
+<wire x1="0.3" y1="2.9" x2="0.3" y2="2.5" width="0.127" layer="21"/>
+<wire x1="-0.3" y1="2.5" x2="0.3" y2="2.5" width="0.127" layer="21"/>
+<wire x1="1.7" y1="0.3" x2="1.25" y2="0.3" width="0.127" layer="21"/>
+<wire x1="1.7" y1="-0.3" x2="1.25" y2="-0.3" width="0.127" layer="21"/>
+<wire x1="1.25" y1="0.3" x2="1.25" y2="-0.3" width="0.127" layer="21"/>
+<wire x1="-0.3" y1="-2.9" x2="-0.3" y2="-2.5" width="0.127" layer="21"/>
+<wire x1="0.3" y1="-2.9" x2="0.3" y2="-2.5" width="0.127" layer="21"/>
+<wire x1="-0.3" y1="-2.5" x2="0.3" y2="-2.5" width="0.127" layer="21"/>
+<pad name="+" x="0" y="1" drill="0.889"/>
+<pad name="-" x="0" y="-1" drill="0.889"/>
+<text x="-2" y="1" size="1.27" layer="21">+</text>
+<text x="-2" y="-2" size="1.27" layer="21">-</text>
+</package>
 </packages>
 <symbols>
 <symbol name="ATMEGAXX8-32PIN_NOPAD">
@@ -350,6 +371,15 @@ by exp-lbrs.ulp</description>
 <pin name="VCC" x="-5.08" y="-2.54" visible="pin" length="middle"/>
 <text x="0" y="10.16" size="1.778" layer="95">&gt;NAME</text>
 <text x="0" y="7.62" size="1.778" layer="96">&gt;VALUE</text>
+</symbol>
+<symbol name="JST_CONNECTOR_FEMALE">
+<wire x1="-7.62" y1="-5.08" x2="7.62" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-5.08" x2="7.62" y2="5.08" width="0.254" layer="94"/>
+<wire x1="7.62" y1="5.08" x2="-7.62" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="5.08" x2="-7.62" y2="-5.08" width="0.254" layer="94"/>
+<pin name="+" x="-2.54" y="-10.16" length="middle" rot="R90"/>
+<pin name="-" x="2.54" y="-10.16" length="middle" rot="R90"/>
+<text x="-7.62" y="7.62" size="1.27" layer="95">JST_CONNECTOR</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -434,6 +464,22 @@ by exp-lbrs.ulp</description>
 <technology name="">
 <attribute name="PROD_ID" value="CONN-08971" constant="no"/>
 </technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="JST_CONNECTOR_FEMALE">
+<gates>
+<gate name="G$1" symbol="JST_CONNECTOR_FEMALE" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="JST_CONNECTOR_FEMALE">
+<connects>
+<connect gate="G$1" pin="+" pad="+"/>
+<connect gate="G$1" pin="-" pad="-"/>
+</connects>
+<technologies>
+<technology name=""/>
 </technologies>
 </device>
 </devices>
@@ -10005,6 +10051,7 @@ Source: www.e-switch.com .. 5500.pdf</description>
 <part name="C5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="100nF"/>
 <part name="D1" library="SparkFun-LED" deviceset="LED" device="0603"/>
 <part name="S2" library="switch" library_urn="urn:adsk.eagle:library:380" deviceset="55?" device="01" package3d_urn="urn:adsk.eagle:package:27750/1"/>
+<part name="U$1" library="quad" deviceset="JST_CONNECTOR_FEMALE" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -10022,6 +10069,7 @@ Source: www.e-switch.com .. 5500.pdf</description>
 <instance part="C5" gate="G$1" x="96.52" y="78.74"/>
 <instance part="D1" gate="G$1" x="22.86" y="68.58" rot="R270"/>
 <instance part="S2" gate="G$1" x="-20.32" y="58.42"/>
+<instance part="U$1" gate="G$1" x="30.48" y="96.52"/>
 </instances>
 <busses>
 </busses>
@@ -10078,7 +10126,11 @@ Source: www.e-switch.com .. 5500.pdf</description>
 <wire x1="96.52" y1="81.28" x2="88.9" y2="81.28" width="0.1524" layer="91"/>
 <wire x1="88.9" y1="81.28" x2="88.9" y2="76.2" width="0.1524" layer="91"/>
 <pinref part="R1" gate="G$1" pin="2"/>
-<wire x1="88.9" y1="76.2" x2="2.54" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="88.9" y1="76.2" x2="27.94" y2="76.2" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="+"/>
+<wire x1="27.94" y1="76.2" x2="2.54" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="86.36" x2="27.94" y2="76.2" width="0.1524" layer="91"/>
+<junction x="27.94" y="76.2"/>
 </segment>
 </net>
 <net name="N$12" class="0">
