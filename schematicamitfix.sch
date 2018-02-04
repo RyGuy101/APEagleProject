@@ -10210,14 +10210,14 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 </packages>
 <symbols>
 <symbol name="MAX1595EUA33+">
-<pin name="AOUT" x="2.54" y="0" length="middle" direction="out"/>
+<pin name="AOUT" x="2.54" y="0" length="middle" direction="pas"/>
 <pin name="!SHDN" x="2.54" y="-2.54" length="middle" direction="pas"/>
 <pin name="IN" x="2.54" y="-5.08" length="middle" direction="in"/>
 <pin name="GND" x="2.54" y="-7.62" length="middle" direction="pwr"/>
 <pin name="PGND" x="58.42" y="-7.62" length="middle" direction="pwr" rot="R180"/>
 <pin name="CXN" x="58.42" y="-5.08" length="middle" direction="pas" rot="R180"/>
 <pin name="CXP" x="58.42" y="-2.54" length="middle" direction="pas" rot="R180"/>
-<pin name="OUT" x="58.42" y="0" length="middle" direction="out" rot="R180"/>
+<pin name="OUT" x="58.42" y="0" length="middle" direction="pas" rot="R180"/>
 <wire x1="7.62" y1="5.08" x2="7.62" y2="-12.7" width="0.1524" layer="94"/>
 <wire x1="7.62" y1="-12.7" x2="53.34" y2="-12.7" width="0.1524" layer="94"/>
 <wire x1="53.34" y1="-12.7" x2="53.34" y2="5.08" width="0.1524" layer="94"/>
@@ -10415,14 +10415,14 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <part name="SUPPLY11" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="SUPPLY12" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="P+7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
-<part name="C9" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="2.2uF"/>
-<part name="C10" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.47uF"/>
-<part name="C11" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="2.2uF"/>
+<part name="C10" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.22uF"/>
 <part name="U$2" library="E-Switch" deviceset="LL3301NF065QG" device=""/>
 <part name="U$5" library="quad" deviceset="N-CHANNEL-MOSFET" device="-IRLML6244TRPBF"/>
 <part name="U$8" library="quad" deviceset="N-CHANNEL-MOSFET" device="-IRLML6244TRPBF"/>
 <part name="U$9" library="quad" deviceset="N-CHANNEL-MOSFET" device="-IRLML6244TRPBF"/>
 <part name="U$12" library="quad" deviceset="N-CHANNEL-MOSFET" device="-IRLML6244TRPBF"/>
+<part name="C12" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="1uF"/>
+<part name="C14" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="1uF"/>
 </parts>
 <sheets>
 <sheet>
@@ -10496,14 +10496,14 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <instance part="SUPPLY11" gate="GND" x="96.52" y="109.22"/>
 <instance part="SUPPLY12" gate="GND" x="152.4" y="129.54"/>
 <instance part="P+7" gate="VCC" x="147.32" y="152.4"/>
-<instance part="C9" gate="G$1" x="60.96" y="119.38"/>
 <instance part="C10" gate="G$1" x="137.16" y="127"/>
-<instance part="C11" gate="G$1" x="152.4" y="139.7"/>
 <instance part="U$2" gate="A" x="-2.54" y="68.58" rot="R90"/>
 <instance part="U$5" gate="G$1" x="246.38" y="-256.54"/>
 <instance part="U$8" gate="G$1" x="368.3" y="-134.62"/>
 <instance part="U$9" gate="G$1" x="246.38" y="25.4"/>
 <instance part="U$12" gate="G$1" x="276.86" y="165.1"/>
+<instance part="C12" gate="G$1" x="60.96" y="119.38"/>
+<instance part="C14" gate="G$1" x="152.4" y="139.7"/>
 </instances>
 <busses>
 </busses>
@@ -10560,6 +10560,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <segment>
 <wire x1="152.4" y1="134.62" x2="152.4" y2="132.08" width="0.1524" layer="91"/>
 <pinref part="SUPPLY12" gate="GND" pin="GND"/>
+<pinref part="C14" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="IMU_INT" class="0">
@@ -11050,6 +11051,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <wire x1="60.96" y1="124.46" x2="53.34" y2="124.46" width="0.1524" layer="91"/>
 <junction x="60.96" y="124.46"/>
 <label x="53.34" y="124.46" size="1.778" layer="95" rot="R180" xref="yes"/>
+<pinref part="C12" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="N$16" class="0">
@@ -11172,6 +11174,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <net name="N$14" class="0">
 <segment>
 <wire x1="60.96" y1="114.3" x2="60.96" y2="111.76" width="0.1524" layer="91"/>
+<pinref part="C12" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$15" class="0">
@@ -11196,12 +11199,12 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <wire x1="68.58" y1="129.54" x2="68.58" y2="147.32" width="0.1524" layer="91"/>
 <wire x1="68.58" y1="147.32" x2="104.14" y2="147.32" width="0.1524" layer="91"/>
 <junction x="124.46" y="147.32"/>
-<pinref part="C11" gate="G$1" pin="1"/>
 <wire x1="104.14" y1="147.32" x2="124.46" y2="147.32" width="0.1524" layer="91"/>
 <wire x1="152.4" y1="142.24" x2="152.4" y2="157.48" width="0.1524" layer="91"/>
 <wire x1="152.4" y1="157.48" x2="104.14" y2="157.48" width="0.1524" layer="91"/>
 <wire x1="104.14" y1="157.48" x2="104.14" y2="147.32" width="0.1524" layer="91"/>
 <junction x="104.14" y="147.32"/>
+<pinref part="C14" gate="G$1" pin="1"/>
 </segment>
 </net>
 </nets>
