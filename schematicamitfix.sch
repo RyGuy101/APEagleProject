@@ -8724,7 +8724,7 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 <pin name="!SHDN" x="2.54" y="-2.54" length="middle" direction="pas"/>
 <pin name="IN" x="2.54" y="-5.08" length="middle" direction="in"/>
 <pin name="GND" x="2.54" y="-7.62" length="middle" direction="pwr"/>
-<pin name="PGND" x="58.42" y="-7.62" length="middle" direction="pwr" rot="R180"/>
+<pin name="PGND" x="58.42" y="-7.62" length="middle" direction="pas" rot="R180"/>
 <pin name="CXN" x="58.42" y="-5.08" length="middle" direction="pas" rot="R180"/>
 <pin name="CXP" x="58.42" y="-2.54" length="middle" direction="pas" rot="R180"/>
 <pin name="OUT" x="58.42" y="0" length="middle" direction="pas" rot="R180"/>
