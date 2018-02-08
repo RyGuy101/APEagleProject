@@ -1,3 +1,4 @@
 *.s#*
 eagle.epf
 *.lck
+*.b#*
