@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="39.3700787" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="0.05" altunitdist="mm" altunit="mm"/>
+<grid distance="39.3700787" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="0.005" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
@@ -2007,7 +2007,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <class number="0" name="default" width="0" drill="0">
 </class>
 </classes>
-<designrules name="oshpark-2layer-1">
+<designrules name="oshpark-2layer">
 <description language="en">&lt;b&gt;OSH Park Design Rules&lt;/b&gt;
 &lt;p&gt;
 Please make sure your boards conform to these design rules.
@@ -2336,7 +2336,6 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <wire x1="10.54" y1="21.1" x2="10.54" y2="20.6766" width="0.762" layer="1"/>
 <wire x1="11.2268" y1="19.9898" x2="10.54" y2="20.6766" width="0.762" layer="1"/>
 <via x="11.2268" y="19.9898" extent="1-16" drill="0.35"/>
-<wire x1="12.57" y1="7.95" x2="12.57" y2="10.1316" width="0.508" layer="16"/>
 <wire x1="12.57" y1="10.1316" x2="12.573" y2="10.1346" width="0.508" layer="16"/>
 <polygon width="0.508" layer="16">
 <vertex x="10.3124" y="12.1412"/>
@@ -2447,25 +2446,33 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <vertex x="14" y="39"/>
 <vertex x="15" y="40"/>
 </polygon>
-<wire x1="10.02" y1="9.9174" x2="10.02" y2="8.52" width="0.508" layer="1"/>
-<wire x1="10.02" y1="8.52" x2="10" y2="8.5" width="0.508" layer="1"/>
-<wire x1="10" y1="5.3" x2="10" y2="5" width="0.762" layer="16"/>
 <wire x1="11.62" y1="9.9174" x2="11.62" y2="6.9662" width="0.508" layer="1"/>
 <wire x1="11.62" y1="6.9662" x2="11.6362" y2="6.95" width="0.508" layer="1"/>
 <via x="11.6362" y="6.95" extent="1-16" drill="0.35"/>
 <wire x1="11.6362" y1="6.95" x2="11.6862" y2="7" width="0.508" layer="16"/>
 <wire x1="11.6862" y1="7" x2="12" y2="7" width="0.508" layer="16"/>
-<wire x1="11.042" y1="5.2754" x2="9.6746" y2="5.2754" width="0.762" layer="1"/>
-<wire x1="9.6746" y1="5.2754" x2="9.5" y2="5.45" width="0.762" layer="1"/>
-<via x="9.5" y="5.45" extent="1-16" drill="0.35"/>
-<wire x1="9.5" y1="5.45" x2="9.65" y2="5.3" width="0.762" layer="16"/>
-<wire x1="9.65" y1="5.3" x2="10" y2="5.3" width="0.762" layer="16"/>
 <wire x1="13.64" y1="7.68" x2="13.64" y2="6.76" width="0.762" layer="1"/>
 <wire x1="13.64" y1="6.76" x2="14.7" y2="5.7" width="0.762" layer="1"/>
 <via x="14.7" y="5.7" extent="1-16" drill="0.35"/>
 <contactref element="U$1" pad="3"/>
-<wire x1="19.93" y1="7.67" x2="17.11" y2="7.99" width="0" layer="19" extent="1-16"/>
-<wire x1="10.02" y1="9.9174" x2="11.62" y2="9.9174" width="0" layer="19" extent="1-1"/>
+<wire x1="17.11" y1="7.99" x2="17.11" y2="6.76" width="0.762" layer="1"/>
+<wire x1="17.11" y1="6.76" x2="17.1" y2="6.75" width="0.762" layer="1"/>
+<via x="17.1" y="6.75" extent="1-16" drill="0.35"/>
+<wire x1="17.1" y1="6.75" x2="17" y2="6.85" width="0.762" layer="16"/>
+<wire x1="17" y1="6.85" x2="17" y2="7" width="0.762" layer="16"/>
+<via x="9.9" y="6.95" extent="1-16" drill="0.35"/>
+<wire x1="10.02" y1="9.9174" x2="9.9058" y2="9.8032" width="0.508" layer="1"/>
+<wire x1="9.9058" y1="9.8032" x2="9.9058" y2="9.1140625" width="0.508" layer="1"/>
+<wire x1="9.9058" y1="9.1140625" x2="9.9" y2="9.1082625" width="0.508" layer="1"/>
+<wire x1="9.9" y1="9.1082625" x2="9.9" y2="6.95" width="0.508" layer="1"/>
+<wire x1="11.042" y1="5.2754" x2="9.7246" y2="5.2754" width="0.762" layer="1"/>
+<wire x1="9.7246" y1="5.2754" x2="9.7" y2="5.3" width="0.762" layer="1"/>
+<via x="9.7" y="5.3" extent="1-16" drill="0.35"/>
+<wire x1="9.7" y1="5.3" x2="10" y2="5" width="0.762" layer="16"/>
+<wire x1="19.93" y1="7.67" x2="18.33" y2="7.67" width="0.3048" layer="16"/>
+<wire x1="18.33" y1="7.67" x2="18" y2="8" width="0.3048" layer="16"/>
+<wire x1="18" y1="8" x2="17.5" y2="8.5" width="0.3048" layer="16"/>
+<wire x1="17.5" y1="8.5" x2="17.5" y2="9.55" width="0.3048" layer="16"/>
 </signal>
 <signal name="IMU_INT">
 <contactref element="U2" pad="INT"/>
@@ -2610,11 +2617,6 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 </polygon>
 <wire x1="15.1638" y1="4.4196" x2="15.1638" y2="3.5156" width="0.4826" layer="16"/>
 <wire x1="15.1638" y1="3.5156" x2="15.1744" y2="3.505" width="0.4826" layer="16"/>
-<wire x1="10.87" y1="7.95" x2="10" y2="7.08" width="0.762" layer="16"/>
-<wire x1="10" y1="7.08" x2="10" y2="7" width="0.762" layer="16"/>
-<via x="10" y="7" extent="1-16" drill="0.35"/>
-<wire x1="9.15" y1="8.15" x2="10" y2="7.3" width="0.762" layer="16"/>
-<wire x1="10" y1="7.3" x2="10" y2="7.08" width="0.762" layer="16"/>
 <polygon width="0.3048" layer="1">
 <vertex x="9" y="40"/>
 <vertex x="13" y="36"/>
@@ -2630,6 +2632,16 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <wire x1="10.82" y1="8.87" x2="10.8" y2="8.85" width="0.508" layer="1"/>
 <wire x1="3.89" y1="11.51" x2="2.49" y2="11.51" width="0.762" layer="1"/>
 <wire x1="2.49" y1="11.51" x2="2" y2="12" width="0.762" layer="1"/>
+<via x="10.8" y="6.85" extent="1-16" drill="0.35"/>
+<wire x1="10.87" y1="7.95" x2="10.87" y2="7.3652375" width="0.762" layer="16"/>
+<wire x1="10.87" y1="7.3652375" x2="10.8008" y2="7.2960375" width="0.762" layer="16"/>
+<wire x1="10.8008" y1="7.2960375" x2="10.8008" y2="6.8508" width="0.762" layer="16"/>
+<wire x1="10.8008" y1="6.8508" x2="10.8" y2="6.85" width="0.762" layer="16"/>
+<wire x1="10.8" y1="6.85" x2="10.8008" y2="6.8508" width="0.762" layer="1"/>
+<wire x1="10.8008" y1="6.8508" x2="10.8008" y2="7" width="0.762" layer="1"/>
+<wire x1="9.15" y1="8.15" x2="9.15" y2="7.55" width="0.762" layer="16"/>
+<wire x1="9.15" y1="7.55" x2="8.4" y2="6.8" width="0.762" layer="16"/>
+<via x="8.4" y="6.8" extent="1-16" drill="0.35"/>
 </signal>
 <signal name="FTDI_TX">
 <contactref element="J1" pad="P$2"/>
@@ -2770,13 +2782,16 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <wire x1="5.286" y1="13.1" x2="5.286" y2="12.814" width="0.3048" layer="16"/>
 <wire x1="5.286" y1="12.814" x2="5.5118" y2="12.5882" width="0.3048" layer="16"/>
 <wire x1="5.5118" y1="10.2722875" x2="5.5118" y2="12.5882" width="0.3048" layer="16"/>
-<wire x1="7.46" y1="8.35" x2="5.5377125" y2="10.2722875" width="0.3048" layer="16"/>
+<wire x1="7.46" y1="8.35" x2="6.58" y2="9.23" width="0.3048" layer="16"/>
+<wire x1="6.58" y1="9.23" x2="5.5377125" y2="10.2722875" width="0.3048" layer="16"/>
 <wire x1="5.5377125" y1="10.2722875" x2="5.5118" y2="10.2722875" width="0.3048" layer="16"/>
 <wire x1="7.46" y1="8.51" x2="7.46" y2="8.35" width="0.3048" layer="16"/>
 <wire x1="9.15" y1="9.85" x2="7.81" y2="8.51" width="0.3048" layer="16"/>
 <wire x1="7.81" y1="8.51" x2="7.46" y2="8.51" width="0.3048" layer="16"/>
 <contactref element="U$1" pad="1"/>
-<wire x1="7.81" y1="8.51" x2="8.01" y2="7.99" width="0" layer="19" extent="1-16"/>
+<wire x1="8.01" y1="7.99" x2="6.77" y2="9.23" width="0.3048" layer="1"/>
+<wire x1="6.77" y1="9.23" x2="6.58" y2="9.23" width="0.3048" layer="1"/>
+<via x="6.58" y="9.23" extent="1-16" drill="0.35"/>
 </signal>
 <signal name="PWM2">
 <contactref element="R3" pad="2"/>
@@ -2909,11 +2924,10 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <signal name="XTAL2">
 <contactref element="U1" pad="8"/>
 <contactref element="Y1" pad="3"/>
-<wire x1="14.84" y1="7.68" x2="14.52899375" y2="7.99100625" width="0.508" layer="1"/>
-<wire x1="14.52899375" y1="7.99100625" x2="14.52899375" y2="8.56135625" width="0.508" layer="1"/>
-<wire x1="14.52899375" y1="8.56135625" x2="14.045175" y2="9.045175" width="0.508" layer="1"/>
-<wire x1="14.045175" y1="9.045175" x2="14.045175" y2="9.892225" width="0.508" layer="1"/>
-<wire x1="14.045175" y1="9.892225" x2="14.02" y2="9.9174" width="0.508" layer="1"/>
+<wire x1="14.84" y1="7.68" x2="14.535" y2="7.985" width="0.508" layer="1"/>
+<wire x1="14.535" y1="7.985" x2="14.535" y2="8.55535" width="0.508" layer="1"/>
+<wire x1="14.02" y1="9.07035" x2="14.02" y2="9.9174" width="0.508" layer="1"/>
+<wire x1="14.535" y1="8.55535" x2="14.02" y2="9.07035" width="0.508" layer="1"/>
 </signal>
 <signal name="XTAL1">
 <contactref element="U1" pad="7"/>
